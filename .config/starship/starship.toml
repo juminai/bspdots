@@ -1,0 +1,29 @@
+format = "$all"
+add_newline = false
+command_timeout = 2000
+
+[character]
+error_symbol = "[󰋔](bold red)"
+success_symbol = "[󰋑](bold green)"
+vicmd_symbol = "[󰮭](bold yellow)"
+format = "$symbol [󰄾](bold bright-black) "
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold blue) "
+disabled = false
+
+[directory]
+disabled = false
+
+[line_break]
+disabled = true
+
+[lua]
+symbol = "[](blue) "
+
+[git_status]
+disabled = false
+
+[git_branch]
+disabled = false

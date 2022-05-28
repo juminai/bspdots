@@ -1,0 +1,117 @@
+#!/bin/bash
+
+#
+#
+#    ▄▄▄▄     ██████  ██▓███   █     █░ ███▄ ▄███▓
+#    ▓█████▄ ▒██    ▒ ▓██░  ██▒▓█░ █ ░█░▓██▒▀█▀ ██▒
+#    ▒██▒ ▄██░ ▓██▄   ▓██░ ██▓▒▒█░ █ ░█ ▓██    ▓██░
+#    ▒██░█▀    ▒   ██▒▒██▄█▓▒ ▒░█░ █ ░█ ▒██    ▒██ 
+#    ░▓█  ▀█▓▒██████▒▒▒██▒ ░  ░░░██▒██▓ ▒██▒   ░██▒
+#    ░▒▓███▀▒▒ ▒▓▒ ▒ ░▒▓▒░ ░  ░░ ▓░▒ ▒  ░ ▒░   ░  ░
+#    ▒░▒   ░ ░ ░▒  ░ ░░▒ ░       ▒ ░ ░  ░  ░      ░
+#     ░    ░ ░  ░  ░  ░░         ░   ░  ░      ░   
+#     ░            ░               ░           ░   
+#          ░                                       
+#
+
+# #######################################################################
+# #                             ENV VARS                                #
+# #######################################################################
+
+
+# #######################################################################
+# #                             FUNCTIONS                               #
+# #######################################################################
+
+# Credits to 6gk/polka
+rule() { bspc rule -a "$@" & }
+config() { bspc config "$@" & }
+start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
+
+# #######################################################################
+# #                            AUTOSTART                                #
+# #######################################################################
+
+# Keybindigs
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Fix Cursor
+xsetroot -cursor_name left_ptr &
+
+# Fix Dbus
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
+
+# Parse colors from "~/.Xresources"
+xrdb -override "${HOME}/.Xresources"
+
+# Compositor
+picom &
+
+# Polkit
+[ -n "$(pidof polkit-gnome-authentication-agent-1)" ] || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# Polybar
+$HOME/.config/polybar/launch.sh &
+
+# Notify Daemon
+dunst &
+
+# Spotify
+[ -n "$(pidof spotify)" ] || spotify &
+
+# Kotatogram 
+[ -n "$(pidof kotatogram-desktop)" ] || kotatogram-desktop &
+
+# Wallpaper
+$HOME/.fehbg &
+
+# #######################################################################
+# #                               RULES                                 #
+# ####################################################################### 
+
+rule Brave-browser         desktop='^2'
+rule KotatogramDesktop     desktop='^3'
+rule discord               desktop='^6'
+rule Transmission-gtk      desktop='^5'
+rule Gimp-2.10             desktop='^6'
+rule mpv                   desktop='^6' state=fullscreen
+rule Leafpad               state=floating 
+rule Viewnior              state=floating
+rule Thunar                state=floating 
+rule Galculator            state=floating
+rule Gucharmap             state=floating
+rule Gpick                 state=floating
+rule Gcolor2               state=floating
+rule Engrampa              state=floating
+rule Lxappearance          state=floating 
+
+config external_rules_command "$HOME/.config/bspwm/scripts/spotifyrule.sh"
+
+# #######################################################################
+# #                           GENERAL CONFIG                            #
+# #######################################################################
+
+bspc monitor -d 1 2 3 4 5 6 
+
+config border_width            3
+config window_gap              15
+config split_ratio             0.50
+
+config borderless_monocle      true
+config gapless_monocle         true 
+config top_padding             40
+config bottom_padding          80
+config left_padding            50
+config right_padding           50
+#config focus_follows_pointer   true
+
+config pointer_modifier        mod4
+config pointer_action1         move
+config pointer_action2         resize_side
+config pointer_action2         resize_corner
+
+config focused_border_color    "#0f0f0f"
+config normal_border_color     "#0f0f0f"
+config active_border_color     "#c49ec4"
+
+start borders

@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+DATE=$(date '+%B-%d-%y-%H-%M'); \
+DIR="$HOME/Pictures/Screenshots/"
+PIC="$DIR/$DATE.png"
+
+[ ! -d "$DIR" ] && mkdir -pv "$DIR"
+
+screen(){ maim -u "$PIC" ;}
+area(){ maim --select "$PIC" ;}
+view(){ bspc desktop -f 5 && viewnior "$PIC" ;}
+abort(){ dunstify -i face-crying "need maim or xclip" ; exit 1 ;}
+
+case "$1" in 
+    full)
+      screen || abort
+      xclip -selection c -t image/png "$PIC"
+      view
+      ;;
+    crop)
+      area || abort 
+      xclip -selection c -t image/png "$PIC"
+      view
+      ;;
+esac
