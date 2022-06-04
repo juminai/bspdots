@@ -63,7 +63,7 @@ dunst &
 [ -n "$(pidof kotatogram-desktop)" ] || kotatogram-desktop &
 
 # Wallpaper
-$HOME/.fehbg &
+feh --bg-fill ~/Pictures/Wallpapers/day.png &
 
 # #######################################################################
 # #                               RULES                                 #
@@ -105,7 +105,7 @@ config left_padding            50
 config right_padding           50
 #config focus_follows_pointer   true
 
-config pointer_modifier        mod4
+config pointer_modifier        Mod4
 config pointer_action1         move
 config pointer_action2         resize_side
 config pointer_action2         resize_corner
