@@ -99,7 +99,7 @@ config split_ratio             0.50
 
 config borderless_monocle      true
 config gapless_monocle         true 
-config top_padding             80
+config top_padding             90
 config bottom_padding          40
 config left_padding            50
 config right_padding           50
