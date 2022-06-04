@@ -35,6 +35,6 @@ case $chosen in
     systemctl suspend
     ;;
   $logout)
-    swaymsg exit
+    bspc quit
     ;;
 esac
