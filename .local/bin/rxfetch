@@ -157,8 +157,7 @@ get_uptime() {
 # Get DE/WM
 # Reference: https://github.com/unixporn/robbb/blob/master/fetcher.sh
 get_de_wm() {
-	#wm="${XDG_CURRENT_DESKTOP#*:}"
-        wm=sway
+	wm="${XDG_CURRENT_DESKTOP#*:}"
 	[ "$wm" ] || wm="$DESKTOP_SESSION"
 
 	# for most WMs

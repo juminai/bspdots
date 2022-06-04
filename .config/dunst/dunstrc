@@ -2,7 +2,7 @@
 width = (100, 350)
 height = 150
 origin = "top-right"
-offset = "30x90"
+offset = "40x100"
 notification_limit = 4
 shrink = yes
 transparency = 0
@@ -11,7 +11,7 @@ padding = 12
 horizontal_padding = 12
 
 frame_width = 3
-frame_color = "#c49ec4"
+frame_color = "#0f0f0f"
 
 corner_radius = 12
 
@@ -24,7 +24,7 @@ progress_bar_frame_width = 0
 
 font = "Roboto Medium 10"
 
-format = "<span size='x-large' font_desc='Roboto 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
+format = "<span size='x-large' font_desc='Cartograph CF Italic 9' weight='600' foreground='#c49ec4'>%s</span>\n%b"
 
 alignment = center
 markup = full
