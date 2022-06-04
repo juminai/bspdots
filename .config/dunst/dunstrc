@@ -10,7 +10,7 @@ transparency = 0
 padding = 12
 horizontal_padding = 12
 
-frame_width = 3
+frame_width = 4
 frame_color = "#0f0f0f"
 
 corner_radius = 12
@@ -22,9 +22,9 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Roboto Medium 10"
+font = "Sarasa Mono CL Italic 11"
 
-format = "<span size='x-large' font_desc='Cartograph CF Italic 9' weight='600' foreground='#c49ec4'>%s</span>\n%b"
+format = "<span size='x-large' font_desc='Sarasa Mono CL Italic 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 
 alignment = center
 markup = full

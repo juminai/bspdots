@@ -40,10 +40,10 @@ COLOR_TEXT=""
 # Polybar settings ____________________________________________________________
 
 # Font for the weather icons
-WEATHER_FONT_CODE=3
+WEATHER_FONT_CODE=2
 
 # Font for the thermometer icon
-TEMP_FONT_CODE=3
+TEMP_FONT_CODE=1
 
 # Font for degree
 DEGREE_FONT_CODE=1

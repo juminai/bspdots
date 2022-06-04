@@ -36,7 +36,7 @@
 	<name>Mountain</name>
 	<unique-id>1653157696807875-1</unique-id>
 	<command>python ~/Documents/ImageGoNord/src/cli.py --mountain -i=%n -o=$(ls %f | grep %n | cut -f 1 -d &apos;.&apos;)-mountain</command>
-	<description></description>
+	<description>mountainize a image</description>
 	<patterns>*</patterns>
 	<startup-notify/>
 	<image-files/>

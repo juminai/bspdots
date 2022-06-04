@@ -72,7 +72,7 @@ alt + {Left,Down,Up,Right}
 
 # terminal emulator
 super + {Return,shift + Return}
-    bspc rule -a \* -o state={tiled,floating} ; alacritty #kitty
+    bspc rule -a \* -o state={tiled,floating} ; alacritty
 
 # rofi menus
 super + {d,e}
