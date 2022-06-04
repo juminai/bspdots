@@ -25,16 +25,16 @@ symbol = "[󰢱 ](blue) "
 
 [git_branch]
 disabled = false
-format = "[$symbol$branch]($style) "
+format = "[$symbol$branch]( $style ) "
 symbol = "󱃷  "
 style = "bold yellow"
 
 [git_status]
-conflicted = " 󰈻 "
-up_to_date = " 󰸞 "
-untracked = " 󰷌 "
-modified = " 󰏪 "
-renamed = " 󱇧 "
+conflicted = "󰈻 "
+up_to_date = "󰸞 "
+untracked = "󰷌 "
+modified = "󰏪 "
+renamed = "󱇧 "
 deleted = "󰆴 "
 ahead = "󰜷 "
 diverged = "󰹺 "
