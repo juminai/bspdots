@@ -2,7 +2,7 @@
 width = (100, 350)
 height = 150
 origin = "top-right"
-offset = "40x100"
+offset = "59x100"
 notification_limit = 4
 shrink = yes
 transparency = 0
