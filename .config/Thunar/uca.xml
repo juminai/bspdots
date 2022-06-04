@@ -4,7 +4,7 @@
 	<icon>utilities-terminal</icon>
 	<name>Open Terminal Here</name>
 	<unique-id>1653152521049373-1</unique-id>
-	<command>alacritty --class=&quot;termfloat&quot;</command>
+	<command>bspc rule -a \* -o state=floating ; alacritty -e $SHELL</command>
 	<description></description>
 	<patterns>*</patterns>
 	<startup-notify/>
@@ -14,7 +14,7 @@
 	<icon>com.github.maoschanz.DynamicWallpaperEditor</icon>
 	<name>Set wallpaper</name>
 	<unique-id>1653152845925747-1</unique-id>
-	<command>killall swaybg ; swaybg -i %n -m fill</command>
+	<command>feh --bg-fill %n</command>
 	<description></description>
 	<patterns>*</patterns>
 	<startup-notify/>
