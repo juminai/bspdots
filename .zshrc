@@ -1,5 +1,5 @@
 #! /bin/zsh
-SHELL=$(which zsh || echo '/bin/zsh')
+SHELL='usr/bin/zsh'
 
 colorscript -r 
 fpath=(usr/share/zsh/site-functions $fpath)
@@ -63,11 +63,11 @@ eval "$(starship init zsh)"
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # alias
-alias ..="cd .."
-alias mkdir="mkdir -pv"
-alias ls="logo-ls"
-alias l="logo-ls -lA"
-alias cat="bat --color always --theme base16 --plain"
+alias ..='cd ..'
+alias mkdir='mkdir -pv'
+alias ls='logo-ls'
+alias l='logo-ls -lA'
+alias cat='bat --color always --theme base16 --plain'
 alias grep='grep --color=auto'
 alias v='nvim'
 alias vim='nvim'
@@ -82,9 +82,11 @@ alias zshrc='nvim $HOME/.zshrc'
 alias xresources='nvim $HOME/.Xresources'
 alias alacrittyrc='nvim $HOME/.config/alacritty/alacritty.yml'
 alias dunstrc='nvim $HOME/.config/dunst/dunstrc'
-alias swayrc='nvim $HOME/.config/sway/config'
-alias bar='nvim $HOME/.config/waybar/config'
-alias style='nvim $HOME/.config/waybar/style.css'
+alias bspwmrc='nvim $HOME/.config/bspwm/bspwmrc'
+alias sxhkdrc='nvim $HOME/.config/sxhkd/sxhkdrc'
+alias bar='nvim $HOME/.config/polybar/config.ini'
+alias modules='nvim $HOME/.config/polybar/modules.ini'
+alias picomrc='nvim $HOME/.config/picom.conf'
 
 alias mirrors='sudo reflector --verbose -c Brazil -a 12 --sort rate --save /etc/pacman.d/mirrorslist ; yay -Syyu'
 alias paci="yay -Slq | fzf --color=16 -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro yay -S"

@@ -1,0 +1,138 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
+configuration {
+    font:			    "Sarasa Mono CL Semibold 12";
+    show-icons:                     true;
+    icon-theme: 		    "Papirus";
+    display-drun: 		    "";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+    sidebar-mode:                   false;
+}
+
+/* -- Catppuccin -- 
+
+* {
+    background:                     #1e1e2eff;
+    background-alt:                 #00000000;
+    background-bar:                 #302d41FF;
+    foreground:                     #d9e0eeff;
+    accent:			    #ddb6f24d;
+    border:		            #ddb6f2FF;
+    selected:               	    #ddb6f24c;
+}
+*/
+/* -- Mountain -- */ 
+
+* {
+    background:                     #0F0F0Fff;
+    background-alt:                 #00000000;
+    background-bar:                 #262626FF;
+    foreground:                     #F0F0F0FF;
+    accent:			    #AC8AAC4d;
+    border:		            #AC8AACFF;
+    selected:               	    #AC8AAC4C;
+}
+
+window {
+    transparency:                   "real";
+    background-color:               @background;
+    text-color:                     @foreground;
+    border:			    0px;
+    border-color:		    @border;
+    border-radius:                  0px;
+    width:			    100%;
+    height:			    100%;
+}
+
+prompt {
+    enabled: 			    true;
+    padding: 			    0.25% 0.75% 0% -0.25%;
+    background-color: 		    @background-alt;
+    text-color: 		    @foreground;
+    font:			    "Font Awesome 6 Pro Solid 14";
+}
+
+entry {
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    placeholder-color:              #a0a0a0;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search";
+    padding:                        0.4% 0% 0% 0%;
+    blink:                          true;
+}
+
+inputbar {
+    children: 	                    [ prompt, entry ];
+    background-color:               @background-bar;
+    text-color:                     @foreground;
+    expand:                         false;
+    border:		            0% 0% 0.3% 0.2%;
+    border-radius:                  15px;
+    border-color:		    @border;
+    margin:                         0% 50% 0% 0%;
+    padding:                        1.25%;
+}
+
+listview {
+    background-color:               @background-alt;
+    columns:                        8;
+    lines:	                    3;
+    spacing:                        0%;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @background-alt;
+    border:			    0% 0% 0% 0%;
+    border-radius:                  0% 0% 0% 0%;
+    border-color:                   @accent;
+    children:                       [ inputbar, listview ];
+    spacing:                        5%;
+    padding:                        15% 10% 10% 10%;
+}
+
+element {
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        3% 0% 3% 0%;
+}
+
+element-icon {
+    background-color: 		    transparent;
+    text-color:       		    inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           80px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 	            transparent;
+    text-color:       		    inherit;
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
+}
+
+element selected {
+    background-color:               @selected;
+    text-color:                     @foreground;
+    border:			    0% 0% 0.2% 0.2%;
+    border-radius:                  25px;
+    border-color:                   @border;
+}
