@@ -1,0 +1,64 @@
+@use "../../theme-color";
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+  width: 17px;
+  height: 17px;
+  border: 0 solid theme-color.divider(theme-color.$on-surface);
+  background-color: rgba(theme-color.$surface-z8, .9);
+}
+
+::-webkit-scrollbar:horizontal,
+::-webkit-scrollbar-corner {
+  border-top-width: 1px;
+}
+
+::-webkit-scrollbar:vertical,
+::-webkit-scrollbar-corner {
+  border-left-width: 1px;
+}
+
+::-webkit-scrollbar {
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 32px;
+  height: 32px;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-color: theme-color.scrollbar-thumb(theme-color.$on-surface);
+  background-clip: padding-box;
+
+  &:horizontal {
+    border-top-width: 5px;
+    border-top-left-radius: 8px 9px;
+    border-top-right-radius: 8px 9px;
+  }
+
+  &:vertical {
+    border-left-width: 5px;
+    border-top-left-radius: 9px 8px;
+    border-bottom-left-radius: 9px 8px;
+  }
+
+  &:hover {
+    background-color: theme-color.scrollbar-thumb(theme-color.$on-surface, "hover");
+  }
+
+  &:active {
+    background-color: theme-color.scrollbar-thumb(theme-color.$on-surface, "pressed");
+  }
+
+  &:disabled {
+    background-color: theme-color.scrollbar-thumb(theme-color.$on-surface, "disabled");
+  }
+}
+
+//
+// Workaround: Chrome does not properly load selection style of GTK theme.
+//
+
+::selection {
+  background-color: rgba(theme-color.primary(theme-color.$on-light), .24);
+}

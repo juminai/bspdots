@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Materia-light",
+  "version": "11",
+  "description": "",
+  "theme": {
+    "colors": {
+      "frame": [240, 240, 240],
+      "frame_inactive": [235, 235, 235],
+      "frame_incognito": [240, 240, 240],
+      "frame_incognito_inactive": [235, 235, 235],
+      "tab_background_text": [0, 0, 0, 0.6],
+      "tab_background_text_inactive": [0, 0, 0, 0.38],
+      "tab_background_text_incognito": [0, 0, 0, 0.6],
+      "tab_background_text_incognito_inactive": [0, 0, 0, 0.38],
+      "tab_text": [0, 0, 0, 0.87],
+      "toolbar": [255, 255, 255],
+      "toolbar_button_icon": [0, 0, 0, 0.6],
+      "omnibox_text": [0, 0, 0, 0.87],
+      "omnibox_background": [245, 245, 245],
+      "bookmark_text": [0, 0, 0, 0.87],
+      "ntp_background": [255, 255, 255],
+      "ntp_text": [0, 0, 0, 0.87],
+      "button_background": [0, 0, 0, 0]
+    }
+  }
+}
