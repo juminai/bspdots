@@ -1,5 +1,5 @@
 #! /bin/zsh
-SHELL='usr/bin/zsh'
+SHELL=$(which zsh || echo '/bin/zsh')
 
 colorscript -r 
 fpath=(usr/share/zsh/site-functions $fpath)
