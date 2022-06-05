@@ -3,10 +3,10 @@ add_newline = false
 command_timeout = 2000
 
 [character]
-error_symbol = "[ ](bold red)"
-success_symbol = "[ ](bold green)"
-vicmd_symbol = "[﫵](bold yellow)"
-format = "$symbol (bold bright-black)"
+error_symbol = "[󰋔](bold red)"
+success_symbol = "[󰋑](bold green)"
+vicmd_symbol = "[󰮭](bold yellow)"
+format = "$symbol [󰄾](bold bright-black) "
 
 [hostname]
 ssh_only = true
@@ -25,17 +25,17 @@ symbol = "[󰢱 ](blue) "
 
 [git_branch]
 disabled = false
-format = "[$symbol$branch]($style) "
-symbol = "  "
+format = "[$symbol$branch]( $style ) "
+symbol = "󱃷  "
 style = "bold yellow"
 
 [git_status]
-conflicted = " "
-up_to_date = "  "
-untracked = "  "
-modified = "  "
+conflicted = "󰈻 "
+up_to_date = "󰸞 "
+untracked = "󰷌 "
+modified = "󰏪 "
 renamed = "󱇧 "
-deleted = "  "
-ahead = " ﰵ "
-diverged = " ﰵ ﰬ "
-behind = " ﰬ "
+deleted = "󰆴 "
+ahead = "󰜷 "
+diverged = "󰹺 "
+behind = "󰜮 "
