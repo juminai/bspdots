@@ -33,6 +33,9 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Fix Cursor
 xsetroot -cursor_name left_ptr &
 
+# Xrandr
+xrandr -r 75
+
 # Fix Dbus
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
 
@@ -45,14 +48,14 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ""
 # Compositor
 picom &
 
-# Polkit
-[ -n "$(pidof polkit-gnome-authentication-agent-1)" ] || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-
 # Polybar
 $HOME/.config/polybar/launch.sh &
 
 # Notify Daemon
 dunst &
+
+# Polkit
+[ -n "$(pidof polkit-gnome-authentication-agent-1)" ] || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Spotify
 [ -n "$(pidof spotify)" ] || spotify &
