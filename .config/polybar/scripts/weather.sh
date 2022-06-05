@@ -1,12 +1,14 @@
 #!/bin/bash
 
+# SETTINGS vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+
 # API settings ________________________________________________________________
 
 APIKEY=`cat $HOME/.config/polybar/scripts/key.txt`
 CITY_NAME='3466537'
 COUNTRY_CODE='BR'
 # Desired output language
-LANG="pt_br"
+LANG="en"
 # UNITS can be "metric", "imperial" or "kelvin". Set KNOTS to "yes" if you
 # want the wind in knots:
 
@@ -22,7 +24,7 @@ UNITS="metric"
 
 COLOR_CLOUD="#767676"
 COLOR_THUNDER="#d3b987"
-COLOR_LIGHT_RAIN="#73cef4"
+COLOR_LIGHT_RAIN="#9ec3c4"
 COLOR_HEAVY_RAIN="#e7e7e7"
 COLOR_SNOW="#e7e7e7"
 COLOR_FOG="#767676"
@@ -36,7 +38,7 @@ COLOR_HOT="#f43753"
 COLOR_NORMAL_TEMP="#e7e7e7"
 
 # Leave "" if you want the default polybar color
-COLOR_TEXT=""
+COLOR_TEXT="#cacaca"
 # Polybar settings ____________________________________________________________
 
 # Font for the weather icons
@@ -44,9 +46,6 @@ WEATHER_FONT_CODE=2
 
 # Font for the thermometer icon
 TEMP_FONT_CODE=1
-
-# Font for degree
-DEGREE_FONT_CODE=1
 
 # Wind settings _______________________________________________________________
 
@@ -63,15 +62,15 @@ DECIMALS=0
 # measurement unit you have set: knots, m/s or mph). Set to 0 if you always
 # want to display wind info. It's ignored if DISPLAY_WIND is false.
 
-MIN_WIND=5
+MIN_WIND=11
 
 # Display the numeric wind force or not. If not, only the wind icon will
 # appear. yes/no
 
-DISPLAY_FORCE="yes"
+DISPLAY_FORCE="no"
 
 # Display the wind unit if wind force is displayed. yes/no
-DISPLAY_WIND_UNIT="yes"
+DISPLAY_WIND_UNIT="no"
 
 # Thermometer settings ________________________________________________________
 
@@ -109,6 +108,10 @@ function getData {
     # echo " " >> "$HOME/.weather.log"
     # echo `date`" ################################" >> "$HOME/.weather.log"
     RESPONSE=`curl -s $URL`
+    if [ "$1" = "-d" ]; then
+        echo $RESPONSE
+        echo ""
+    fi
     CODE="$?"
     # echo "Response: $RESPONSE" >> "$HOME/.weather.log"
     RESPONSECODE=0
@@ -198,7 +201,7 @@ function setIcons {
         ICON=""
     else
         ICON_COLOR=$COLOR_ERR
-        ICON=""
+        ICON=""
     fi
     WIND=""
     WINDFORCE=`echo "$RESPONSE" | jq .wind.speed`
@@ -221,7 +224,7 @@ function setIcons {
         fi
     fi
     if [ "$DISPLAY_WIND" = "yes" ] && [ `echo "$WINDFORCE >= $MIN_WIND" |bc -l` -eq 1 ]; then
-        WIND="%{T$WEATHER_FONT_CODE}%{F$COLOR_WIND}%{F-}%{T-}"
+        WIND="%{T$WEATHER_FONT_CODE}%{F$COLOR_WIND}%{F-}%{T-}"
         if [ $DISPLAY_FORCE = "yes" ]; then
             WIND="$WIND $COLOR_TEXT_BEGIN$WINDFORCE$COLOR_TEXT_END"
             if [ $DISPLAY_WIND_UNIT = "yes" ]; then
@@ -237,31 +240,39 @@ function setIcons {
         WIND="$WIND |"
     fi
     if [ "$UNITS" = "metric" ]; then
-        TEMP_ICON="°C "
+        TEMP_ICON="°C"
     elif [ "$UNITS" = "imperial" ]; then
-        TEMP_ICON="°F "
-    else 
-        TEMP_ICON="°K "
-    fi   
+        TEMP_ICON="K"
+    else
+        TEMP_ICON="F"
+    fi
     
     TEMP=`echo "$TEMP" | cut -d "." -f 1`
     
+#    if [ "$TEMP" -le $COLD_TEMP ]; then
+#        TEMP="%{F$COLOR_COLD}%{T$TEMP_FONT_CODE}%{T-}%{F-} $COLOR_TEXT_BEGIN$TEMP%{T$TEMP_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
+#    elif [ `echo "$TEMP >= $HOT_TEMP" | bc` -eq 1 ]; then
+#        TEMP="%{F$COLOR_HOT}%{T$TEMP_FONT_CODE}%{T-}%{F-} $COLOR_TEXT_BEGIN$TEMP%{T$TEMP_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
+#    else
+#        TEMP="%{F$COLOR_NORMAL_TEMP}%{T$TEMP_FONT_CODE}%{T-}%{F-} $COLOR_TEXT_BEGIN$TEMP%{T$TEMP_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
+#    fi
     if [ "$TEMP" -le $COLD_TEMP ]; then
-        TEMP="%{F$COLOR_COLD}%{T$TEMP_FONT_CODE}%{T-}%{F-}$COLOR_TEXT_BEGIN$TEMP%{T$DEGREE_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
+        TEMP="%{F$COLOR_COLD}%{T$TEMP_FONT_CODE}%{T-}%{F-}$COLOR_TEXT_BEGIN$TEMP%{T$TEMP_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
     elif [ `echo "$TEMP >= $HOT_TEMP" | bc` -eq 1 ]; then
-        TEMP="%{F$COLOR_HOT}%{T$TEMP_FONT_CODE}%{T-}%{F-}$COLOR_TEXT_BEGIN$TEMP%{T$DEGREE_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
+        TEMP="%{F$COLOR_HOT}%{T$TEMP_FONT_CODE}%{T-}%{F-}$COLOR_TEXT_BEGIN$TEMP%{T$TEMP_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
     else
-        TEMP="%{F$COLOR_NORMAL_TEMP}%{T$TEMP_FONT_CODE}%{T-}%{F-}$COLOR_TEXT_BEGIN$TEMP%{T$DEGREE_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
+        TEMP="%{F$COLOR_NORMAL_TEMP}%{T$TEMP_FONT_CODE}%{T-}%{F-}$COLOR_TEXT_BEGIN$TEMP%{T$TEMP_FONT_CODE}$TEMP_ICON%{T-}$COLOR_TEXT_END"
     fi
 }
 
 function outputCompact {
+#    OUTPUT="$WIND %{T$WEATHER_FONT_CODE}%{F$ICON_COLOR}$ICON%{F-}%{T-} $ERR_MSG$COLOR_TEXT_BEGIN$DESCRIPTION$COLOR_TEXT_END| $TEMP"
     OUTPUT="$WIND%{T$WEATHER_FONT_CODE}%{F$ICON_COLOR}$ICON%{F-}%{T-} $ERR_MSG$COLOR_TEXT_BEGIN$DESCRIPTION$COLOR_TEXT_END$TEMP"
     # echo "Output: $OUTPUT" >> "$HOME/.weather.log"
     echo "$OUTPUT"
 }
 
-getData
+getData $1
 if [ $ERROR -eq 0 ]; then
     MAIN=`echo $RESPONSE | jq .weather[0].main`
     WID=`echo $RESPONSE | jq .weather[0].id`
@@ -272,7 +283,7 @@ if [ $ERROR -eq 0 ]; then
     WIND=""
     TEMP=`echo $RESPONSE | jq .main.temp`
     if [ $DISPLAY_LABEL = "yes" ]; then
-        DESCRIPTION=`echo "$RESPONSE" | jq .weather[0].description | tr -d '"' | sed 's/.*/\L&/; s/[a-z]*/\u&/g'`""
+        DESCRIPTION=`echo "$RESPONSE" | jq .weather[0].description | tr -d '"' | sed 's/.*/\L&/; s/[a-z]*/\u&/g'`" "
     else
         DESCRIPTION=""
     fi
@@ -281,5 +292,5 @@ if [ $ERROR -eq 0 ]; then
     setIcons
     outputCompact
 else
-    echo ""
+    echo " "
 fi

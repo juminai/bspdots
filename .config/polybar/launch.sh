@@ -7,6 +7,7 @@ if ! pgrep -x polybar; then
     polybar -c ~/.config/polybar/config.ini time &
     polybar -c ~/.config/polybar/config.ini memory &
     polybar -c ~/.config/polybar/config.ini pulseaudio &
+    polybar -c ~/.config/polybar/config.ini rofi &
 else
     pkill -USR1 polybar
 fi
