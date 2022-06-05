@@ -15,16 +15,16 @@ frame_color = "#0f0f0f"
 
 corner_radius = 12
 
-separator_color = frame
+separator_color = "#4c4c4c"
 
 progress_bar_height = 5
 progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Sarasa Mono CL Semibold Italic 11"
+font = "Sarasa Mono CL Semibold 11"
 
-format = "<span size='x-large' font_desc='Sarasa Mono CL Italic 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
+format = "<span size='x-large' font_desc='Sarasa Mono CL 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 
 alignment = center
 markup = full
