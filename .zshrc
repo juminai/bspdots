@@ -76,7 +76,6 @@ alias cp='cp -rv'
 alias rm='rm -rfv'
 alias gc='git clone'
 alias q='exit'
-alias rx='clear ; rxfetch'
 
 alias zshrc='nvim $HOME/.zshrc'
 alias xresources='nvim $HOME/.Xresources'
