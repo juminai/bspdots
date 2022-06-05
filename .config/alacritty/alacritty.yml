@@ -6,8 +6,8 @@ env:
 
 window:
   padding:
-    x: 25
-    y: 25
+    x: 20
+    y: 20
 
 scrolling:
   history: 1000
