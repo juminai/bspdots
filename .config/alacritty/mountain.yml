@@ -5,7 +5,7 @@ colors:
 
   cursor:
     text: '0x0f0f0f'
-    cursor: '0xc49ec4'
+    cursor: '0xe7e7e7'
 
   normal:
     black:   '0x262626'
