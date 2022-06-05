@@ -37,7 +37,7 @@ xsetroot -cursor_name left_ptr &
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
 
 # Parse colors from "~/.Xresources"
-xrdb "~/.Xresources"
+xrdb -merge $HOME/.Xresources
 
 # Compositor
 picom &
@@ -46,7 +46,7 @@ picom &
 [ -n "$(pidof polkit-gnome-authentication-agent-1)" ] || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Polybar
-~/.config/polybar/launch.sh &
+$HOME/.config/polybar/launch.sh &
 
 # Notify Daemon
 dunst &
@@ -58,7 +58,7 @@ dunst &
 [ -n "$(pidof kotatogram-desktop)" ] || kotatogram-desktop &
 
 # Wallpaper
-~/.fehbg &
+$HOME/.fehbg &
 
 # #######################################################################
 # #                               RULES                                 #
@@ -80,7 +80,7 @@ rule Gcolor2               state=floating
 rule Engrampa              state=floating
 rule Lxappearance          state=floating 
 
-config external_rules_command "~/.config/bspwm/scripts/spotifyrule.sh"
+config external_rules_command "$HOME/.config/bspwm/scripts/spotifyrule.sh"
 
 # #######################################################################
 # #                           GENERAL CONFIG                            #
