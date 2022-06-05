@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 DATE=$(date +'%d-%B-%y~%H:%M'); \
-DIR="$HOME/Pictures/Screenshots/"
+DIR="$HOME/Pictures/Screenshots"
 PIC="$DIR/$DATE.png"
 
 [ ! -d "$DIR" ] && mkdir -pv "$DIR"
