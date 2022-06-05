@@ -36,8 +36,11 @@ xsetroot -cursor_name left_ptr &
 # Fix Dbus
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
 
-# Parse colors from "~/.Xresources"
+# Merge Xresources
 xrdb -merge $HOME/.Xresources
+
+# Disable CSD in gtk apps
+gsettings set org.gnome.desktop.wm.preferences button-layout ""
 
 # Compositor
 picom &
@@ -88,7 +91,7 @@ config external_rules_command "$HOME/.config/bspwm/scripts/spotifyrule.sh"
 
 bspc monitor -d 1 2 3 4 5 6 
 
-config border_width            5
+config border_width            2
 config window_gap              10
 config split_ratio             0.50
 
