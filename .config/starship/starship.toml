@@ -31,7 +31,7 @@ style = "bold yellow"
 
 [git_status]
 conflicted = " "
-up_to_date = "  "
+up_to_date = " "
 untracked = "  "
 modified = "  "
 renamed = "󱇧 "
