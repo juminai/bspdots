@@ -91,7 +91,7 @@ config external_rules_command "$HOME/.config/bspwm/scripts/spotifyrule.sh"
 
 bspc monitor -d 1 2 3 4 5 6 
 
-config border_width            2
+config border_width            4
 config window_gap              10
 config split_ratio             0.50
 
