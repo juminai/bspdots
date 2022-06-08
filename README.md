@@ -1,1 +1,1 @@
-![desktop images](Screenshots/genshin.png)
+![desktop images](Screenshots/cry.png)
