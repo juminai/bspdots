@@ -33,15 +33,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Fix Cursor
 xsetroot -cursor_name left_ptr &
 
-# Xrandr
-xrandr -r 75
-
-# Fix Dbus
-source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
-
-# Merge Xresources
-xrdb -merge $HOME/.Xresources
-
 # Disable CSD in gtk apps
 gsettings set org.gnome.desktop.wm.preferences button-layout ""
 
@@ -113,6 +104,6 @@ config pointer_action2         resize_corner
 
 config focused_border_color    "#0f0f0f"
 config normal_border_color     "#0f0f0f"
-config active_border_color     "#0f0f0f"
+config active_border_color     "#4c4c4c"
 
 start borders
