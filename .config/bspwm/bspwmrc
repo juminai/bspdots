@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/sh
 
 #
 #
@@ -33,7 +33,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # Fix Cursor
 xsetroot -cursor_name left_ptr &
 
-# Disable CSD in gtk apps
+# Disable buttons on gtk apps
 gsettings set org.gnome.desktop.wm.preferences button-layout ""
 
 # Compositor
