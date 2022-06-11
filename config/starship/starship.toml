@@ -1,32 +1,49 @@
-format = "$all"
+format = """
+($directory)($character)
+"""
+right_format = """$all"""
+
 add_newline = false
 command_timeout = 2000
+
+[line_break]
+disabled = false
 
 [character]
 error_symbol = "[󰋔](bold red)"
 success_symbol = "[󰋑](bold green)"
 vicmd_symbol = "[󰮭](bold yellow)"
-format = "$symbol [󰄾](bold bright-black) "
+format = "$symbol [󰄾 ](bold bright-black)"
 
 [hostname]
 ssh_only = true
 format = "[$hostname](bold blue) "
 disabled = false
 
+[username]
+disabled = true
+show_always = true
+style_user = "bold white"
+format = "[$user]($style)"
+
 [directory]
 truncation_length = 5
+home_symbol = "~"
 format = "[$path]($style)[$lock_symbol]($lock_style) "
-
-[line_break]
-disabled = true
 
 [lua]
 symbol = "[󰢱 ](blue) "
 
+[nodejs]
+format = "via [󰊦 $version](bold blue) "
+
+[package]
+format = "[󰹄  $version](bold yellow) "
+
 [git_branch]
 disabled = false
-format = "[$symbol$branch]( $style ) "
-symbol = "󱃷  "
+format = "[$symbol $branch]($style) "
+symbol = "󰘬 "
 style = "bold yellow"
 
 [git_status]
