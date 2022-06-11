@@ -8,7 +8,7 @@
  */
 
 configuration {
-    font:			    "Sarasa Mono CL Nerd Font Italic 12";
+    font:			    "Sarasa Mono CL Nerd Font Semibold 12";
     show-icons:                     true;
     icon-theme: 		    "Papirus";
     display-drun: 		    "";
