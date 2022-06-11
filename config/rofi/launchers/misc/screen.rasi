@@ -79,14 +79,14 @@ inputbar {
     border:		            0% 0% 0.3% 0.2%;
     border-radius:                  15px;
     border-color:		    @border;
-    margin:                         0% 50% 0% 0%;
+    margin:                         0% 25% 0% 25%;
     padding:                        1.25%;
 }
 
 listview {
     background-color:               @background-alt;
     columns:                        8;
-    lines:	                    3;
+    lines:	                    4;
     spacing:                        0%;
     cycle:                          false;
     dynamic:                        true;
