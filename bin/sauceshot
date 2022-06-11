@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-DATE=$(date +'%d-%B-%y~%H:%M'); \
+DATE=$(date +'%d-%B-%y~%H:%M:%S'); \
 DIR="$HOME/Pictures/Screenshots"
 PIC="$DIR/$DATE.png"
 
