@@ -8,7 +8,7 @@
  */
 
 configuration {
-    font:			    "Sarasa Mono CL 14";
+    font:			    "Sarasa Mono CL Nerd Font Semibold Italic 14";
     show-icons:                     false;
     icon-theme: 		    "Papirus";
     drun-display-format:            "{name}";
@@ -32,6 +32,7 @@ prompt {
     padding:                        1% 1% 1% 0%;
     background-color: 		    @background-alt;
     text-color: 		    @foreground;
+    position:                        center;
 }
 
 textbox-prompt-colon {
