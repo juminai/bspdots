@@ -22,7 +22,7 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Roboto 11"
+font = "Roboto Medium 10"
 
 format = "<span size='x-large' font_desc='Sarasa Mono CL Nerd Font 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 
