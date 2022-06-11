@@ -1,0 +1,57 @@
+#!/bin/bash
+
+DIR="$HOME/.config/dunst/icons"
+
+function get_volume {
+      amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}'
+}
+
+function is_mute {
+      amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off
+}
+
+function send_notification {
+  volume=`get_volume`
+  if [ "$volume" = "0" ]; then
+    icon_name="$DIR/notification-audio-volume-muted.svg"
+  else
+    if [  "$volume" -lt "30" ]; then
+      icon_name="$DIR/notification-audio-volume-low.svg"
+    else
+      if [ "$volume" -lt "80" ]; then
+        icon_name="$DIR/notification-audio-volume-medium.svg"
+      else
+          icon_name="$DIR/notification-audio-volume-high.svg"
+      fi
+    fi
+  fi 
+  # Send the notification
+  dunstify "$volume%  " -i $icon_name -r 5555 -u low -h int:value:$(($volume)) 
+}
+
+case $1 in
+  up)
+    # Unmute
+	  amixer -D pulse set Master on > /dev/null
+	  # +2%
+	  amixer -D pulse set Master 2%+ > /dev/null
+    send_notification
+    ;;
+  down)
+    # Unmute
+	  amixer -D pulse set Master on > /dev/null
+    # -2%
+	  amixer -D pulse set Master 2%- > /dev/null
+    send_notification
+    ;;
+  toggle)
+    # Toggle mute
+	  amixer -D pulse set Master 1+ toggle > /dev/null
+    if is_mute ; then
+      icon_name="$DIR/notification-audio-volume-muted.svg"
+      dunstify "Muted   " -i $icon_name -r 5555 -u low -h string:synchronous:audio-volume
+    else
+      send_notification
+    fi
+    ;;
+esac

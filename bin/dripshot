@@ -1,0 +1,33 @@
+#!/usr/bin/env sh
+
+date="$(date +'%d-%B-%y~%H:%M')"
+dir="$HOME/Pictures/Screenshots"
+pic="$dir/$date.png"
+
+[ ! -d "$dir" ] && mkdir -pv "$dir"
+
+full(){ 
+    maim -u "$pic" ;
+}
+
+crop(){ 
+    maim --select "$pic" ;
+}
+
+abort(){ 
+    dunstify -i face-crying "Banido" ; 
+    exit 1 ;
+}
+
+case "$1" in 
+    full)
+      full || abort
+      xclip -selection c -t image/png "$pic"
+      dunstify -u normal -i "$pic" "Sauced!" $pic
+      ;;
+    crop)
+      crop || abort
+      xclip -selection c -t image/png "$pic"
+      dunstify -u normal -i "$pic" "Sauced!" $pic
+      ;;
+esac

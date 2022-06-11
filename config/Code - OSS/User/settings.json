@@ -1,0 +1,84 @@
+{
+  "window.restoreWindows": "all",
+  "files.hotExit": "onExit",
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.pl": "prolog"
+  },
+  "editor.suggestSelection": "first",
+  "editor.fontSize": 15,
+  "editor.fontFamily": "'Roboto Mono', 'Font Awesome 6 Pro Solid'",
+  "workbench.colorCustomizations": {
+    "list.activeSelectionBackground": "#262626",
+    "list.hoverBackground": "#262626",
+    "editorWidget.background": "#262626",
+    "panel.background": "#262626",
+    "titleBar.activeBackground": "#262626",
+    "breadcrumbPicker.background": "#262626",
+    "settings.dropdownBackground": "#262626",
+    "settings.numberInputBackground": "#262626",
+    "settings.textInputBackground": "#262626",
+    "settings.checkboxBackground": "#262626",
+    "editor.background": "#191919",
+    "tab.activeBackground": "#0f0f0f",
+    "tab.inactiveBackground": "#191919",
+    "sideBar.background": "#0f0f0f",
+    "sideBarSectionHeader.background": "#0f0f0f",
+    "activityBar.background": "#0f0f0f",
+    "statusBar.background": "#0f0f0f",
+    "scrollbarSlider.activeBackground": "#0f0f0f",
+    "tab.activeBorder": "#19191900",
+    "editorGroupHeader.tabsBackground": "#191919",
+    "statusBar.noFolderBackground": "#191919",
+    "tab.border": "#191919",
+    "editorHoverWidget.background": "#191919",
+    "menu.background": "#191919",
+    "debugToolBar.background": "#191919",
+    "editorBracketMatch.background": "#191919",
+    "quickInput.background": "#191919",
+    "editorOverviewRuler.border": "#191919",
+    "notifications.background": "#191919",
+    "breadcrumb.background": "#191919"
+  },
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "customizeUI.activityBar": "bottom",
+  "customizeUI.titleBar": "inline",
+  "customizeUI.font.regular": "Roboto",
+  "customizeUI.fontSizeMap": {
+    "13px": "12px",
+    "monospace": "12px"
+  },
+  "customizeUI.stylesheet": {
+    ".tabs-container ": "padding-top:7px; padding-left:2px; padding-bottom:5px",
+    ".tabs-container > .tab": "border-radius: 7px 7px 7px 7px; height: 20px; margin-left: 5px; padding-right:4px",
+    ".monaco-editor .suggest-widget": "border-radius: 10px 10px 10px 10px; overflow:hidden;"
+  },
+  "window.titleBarStyle": "native",
+  "editor.minimap.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "diffEditor.wordWrap": "on",
+  "colorize.include": [
+  
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "**/*.styl"
+  ],
+  "colorize.languages": [
+  
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg"
+  ]
+}

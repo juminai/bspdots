@@ -1,0 +1,29 @@
+body {
+    font-family: "Sarasa Mono CL";
+}
+
+code {
+    color: #e7e7e7;
+}
+
+.theme-dark {
+    --background-primary: #0f0f0f;
+    --background-primary-alt: #0f0f0f;
+    --background-secondary: #0f0f0f;
+    --background-secondary-alt: #0f0f0f;
+    --background-tertiary: #0f0f0f;
+}
+
+/* No Scrollbar*/
+::-webkit-scrollbar-thumb {
+    color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Home */
+.container-2cd8Mz {
+	background-color: #0f0f0f !important;
+}

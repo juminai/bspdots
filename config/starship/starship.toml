@@ -1,0 +1,41 @@
+format = "$all"
+add_newline = false
+command_timeout = 2000
+
+[character]
+error_symbol = "[󰋔](bold red)"
+success_symbol = "[󰋑](bold green)"
+vicmd_symbol = "[󰮭](bold yellow)"
+format = "$symbol [󰄾](bold bright-black) "
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold blue) "
+disabled = false
+
+[directory]
+truncation_length = 5
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[line_break]
+disabled = true
+
+[lua]
+symbol = "[󰢱 ](blue) "
+
+[git_branch]
+disabled = false
+format = "[$symbol$branch]( $style ) "
+symbol = "󱃷  "
+style = "bold yellow"
+
+[git_status]
+conflicted = "󰈻 "
+up_to_date = "󰸞 "
+untracked = "󰷌 "
+modified = "󰏪 "
+renamed = "󱇧 "
+deleted = "󰆴 "
+ahead = "󰜷 "
+diverged = "󰹺 "
+behind = "󰜮 "

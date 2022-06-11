@@ -1,6 +1,0 @@
-chrome-scrollbar/icons/16
-chrome-scrollbar/icons/48
-chrome-scrollbar/icons/128
-chrome-scrollbar-dark/icons/16
-chrome-scrollbar-dark/icons/48
-chrome-scrollbar-dark/icons/128
