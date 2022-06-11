@@ -104,6 +104,6 @@ config pointer_action2         resize_corner
 
 config focused_border_color    "#0f0f0f"
 config normal_border_color     "#0f0f0f"
-config active_border_color     "#4c4c4c"
+config active_border_color     "#c49ec4"
 
 start borders
