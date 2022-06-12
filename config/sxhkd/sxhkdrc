@@ -108,4 +108,4 @@ super + alt + p
 
 # shortcuts
 super + {b,k,s}
-    bspc desktop -f {'^2' ; brave,'^3' ; kotatogram-desktop,'^5' ; thunar}
+    bspc desktop -f {2 ; brave,3 ; kotatogram-desktop,5 ; thunar}
