@@ -49,7 +49,7 @@ case $1 in
 	  amixer -D pulse set Master 1+ toggle > /dev/null
     if is_mute ; then
       icon_name="$DIR/notification-audio-volume-muted.svg"
-      dunstify "Muted   " -i $icon_name -r 5555 -u low -h string:synchronous:audio-volume
+      dunstify "Muted  " -i $icon_name -r 5555 -u low -h string:synchronous:audio-volume
     else
       send_notification
     fi
