@@ -1,1 +1,1 @@
-![desktop images](Screenshots/magnolia.png)
+![desktop images](screenshots/magnolia.png)
