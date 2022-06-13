@@ -22,7 +22,7 @@ border_width_current=$(bspc config border_width)
 
 # half if even, 1px to outer if odd
 border_width_in_normal=$(( border_width_current ))
-border_width_out_normal=40
+border_width_out_normal=30
 border_width_in_focused=$border_width_in_normal
 border_width_out_focused=$border_width_out_normal
 
