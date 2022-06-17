@@ -37,7 +37,7 @@ xsetroot -cursor_name left_ptr &
 gsettings set org.gnome.desktop.wm.preferences button-layout ""
 
 # Compositor
-picom &
+picom --experimental-backend &
 
 # Polybar
 $HOME/.config/polybar/launch.sh &
