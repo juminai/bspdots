@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-  <name>Mountain3</name>
+  <name>Mountain</name>
   <author>nana-4</author>
   <copyright>GPL</copyright>
   <date>2020</date>
-  <description>Mountain3 Metacity theme</description>
+  <description>Mountain Metacity theme</description>
 </info>
 
 <!-- meaningful constants -->
 
 <constant name="C_titlebar_focused" value="#0F0F0F"/>
 <constant name="C_titlebar_unfocused" value="#0F0F0F"/>
-<constant name="C_highlight_focused" value="blend/#0F0F0F/#F0F0F0/0.05"/>
-<constant name="C_highlight_unfocused" value="blend/#0F0F0F/#F0F0F0/0.05"/>
-<constant name="C_title_focused" value="blend/#0F0F0F/#F0F0F0/0.87"/>
-<constant name="C_title_unfocused" value="blend/#0F0F0F/#F0F0F0/0.6"/>
+<constant name="C_highlight_focused" value="blend/#0F0F0F/#E7E7E7/0.05"/>
+<constant name="C_highlight_unfocused" value="blend/#0F0F0F/#E7E7E7/0.05"/>
+<constant name="C_title_focused" value="blend/#0F0F0F/#E7E7E7/0.87"/>
+<constant name="C_title_unfocused" value="blend/#0F0F0F/#E7E7E7/0.6"/>
 
 <!-- geometries -->
 
