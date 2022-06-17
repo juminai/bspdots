@@ -22,7 +22,7 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Sarasa Gothic CL 10"
+font = "Sarasa Gothic CL Semibold 9"
 
 format = "<span size='x-large' font_desc='Sarasa Mono CL 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 
@@ -68,4 +68,4 @@ background = "#0f0f0f"
 foreground = "#e7e7e7"
 highlight = "#c49ec4"
 
-# vim:ft=dosini
+# vim:ft=cfg
