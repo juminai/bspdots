@@ -161,9 +161,9 @@ function setIcons {
         #Rain
         ICON_COLOR=$COLOR_HEAVY_RAIN
         if [ $DATE -ge $SUNRISE -a $DATE -le $SUNSET ]; then
-            ICON="󰖨"
+            ICON="󰖖"
         else
-            ICON="󰖨"
+            ICON="󰖖"
         fi
     elif [ $WID -le 622 ]; then
         #Snow

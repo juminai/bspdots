@@ -1,4 +1,4 @@
-# vim:ft=conf                                                       
+# vim:ft=config                                                       
 #                                                      
 #        ██████ ▒██   ██▒ ██░ ██  ██ ▄█▀▓█████▄        
 #      ▒██    ▒ ▒▒ █ █ ▒░▓██░ ██▒ ██▄█▒ ▒██▀ ██▌      
@@ -80,7 +80,7 @@ super + {d,e}
 
 # screenshot full
 Print {_,super +}
-   sauceshot {full,crop} #dripshot 
+   dripshot {full,crop} #sauceshot 
 
 # volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
