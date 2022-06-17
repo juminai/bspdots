@@ -5,7 +5,7 @@
   "extensions.ignoreRecommendations": true,
   "editor.suggestSelection": "first",
   "editor.fontSize": 15,
-  "editor.fontFamily": "'Sarasa Mono CL', 'Font Awesome 6 Pro Solid'",
+  "editor.fontFamily": "'Sarasa Mono CL', 'Font Awesome 6 Pro Solid', 'Material Design Icons'",
   "workbench.colorCustomizations": {
     "list.activeSelectionBackground": "#262626",
     "list.hoverBackground": "#262626",
