@@ -3,12 +3,9 @@
   "files.hotExit": "onExit",
   "workbench.startupEditor": "none",
   "extensions.ignoreRecommendations": true,
-  "files.associations": {
-    "*.pl": "prolog"
-  },
   "editor.suggestSelection": "first",
   "editor.fontSize": 15,
-  "editor.fontFamily": "'Roboto Mono', 'Font Awesome 6 Pro Solid'",
+  "editor.fontFamily": "'Sarasa Mono CL', 'Font Awesome 6 Pro Solid'",
   "workbench.colorCustomizations": {
     "list.activeSelectionBackground": "#262626",
     "list.hoverBackground": "#262626",
@@ -43,42 +40,4 @@
   },
   "workbench.list.smoothScrolling": true,
   "editor.smoothScrolling": true,
-  "customizeUI.activityBar": "bottom",
-  "customizeUI.titleBar": "inline",
-  "customizeUI.font.regular": "Roboto",
-  "customizeUI.fontSizeMap": {
-    "13px": "12px",
-    "monospace": "12px"
-  },
-  "customizeUI.stylesheet": {
-    ".tabs-container ": "padding-top:7px; padding-left:2px; padding-bottom:5px",
-    ".tabs-container > .tab": "border-radius: 7px 7px 7px 7px; height: 20px; margin-left: 5px; padding-right:4px",
-    ".monaco-editor .suggest-widget": "border-radius: 10px 10px 10px 10px; overflow:hidden;"
-  },
-  "window.titleBarStyle": "native",
-  "editor.minimap.enabled": false,
-  "window.menuBarVisibility": "compact",
-  "editor.formatOnSave": true,
-  "editor.wordWrap": "on",
-  "diffEditor.wordWrap": "on",
-  "colorize.include": [
-  
-    "**/*.css",
-    "**/*.scss",
-    "**/*.sass",
-    "**/*.less",
-    "**/*.styl"
-  ],
-  "colorize.languages": [
-  
-    "css",
-    "sass",
-    "scss",
-    "less",
-    "postcss",
-    "sss",
-    "stylus",
-    "xml",
-    "svg"
-  ]
 }
