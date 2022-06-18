@@ -68,4 +68,4 @@ background = "#0f0f0f"
 foreground = "#e7e7e7"
 highlight = "#c49ec4"
 
-# vim:ft=cfg
+# vim:ft=dosini
