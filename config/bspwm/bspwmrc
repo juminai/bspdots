@@ -55,7 +55,8 @@ dunst &
 [ -n "$(pidof kotatogram-desktop)" ] || kotatogram-desktop &
 
 # Wallpaper
-$HOME/.fehbg &
+#$HOME/.fehbg &
+feh --bg-fill ~/Pictures/Wallpapers/ -z
 
 # #######################################################################
 # #                               RULES                                 #
