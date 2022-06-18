@@ -1,1 +1,1 @@
-![desktop images](screenshots/kafig.png)
+![desktop images](screenshots/desuwa.png)

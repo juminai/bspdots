@@ -92,3 +92,5 @@ alias paci="yay -Slq | fzf --color=16 -m --preview 'cat <(yay -Si {1}) <(yay -Fl
 alias pacr="yay -Qq | fzf --color=16 -m --preview 'yay -Qi {1}' | xargs -ro yay -Rns"
 alias pac="yay -Q | fzf --color=16"
 alias pacc='yay -Qtdq | yay -Rns -'
+
+alias kimochi='bspc desktop -f 6 ; mpv https://pornhub.com/random/'
