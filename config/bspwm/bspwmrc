@@ -14,18 +14,14 @@
 #          ░                                       
 #
 
-# #######################################################################
-# #                             FUNCTIONS                               #
-# #######################################################################
+# ----------------------- FUNCTIONS ----------------------- 
 
 # Credits to 6gk/polka
 rule() { bspc rule -a "$@" & }
 config() { bspc config "$@" & }
 start() { pkill -x "$1"; { sleep 0.1; "$@" & }; }
 
-# #######################################################################
-# #                            AUTOSTART                                #
-# #######################################################################
+# ----------------------- AUTOSTART -----------------------
 
 # Keybindigs
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -58,9 +54,7 @@ dunst &
 #$HOME/.fehbg &
 feh --bg-fill ~/Pictures/Wallpapers/ -z
 
-# #######################################################################
-# #                               RULES                                 #
-# ####################################################################### 
+# ----------------------- RULES -----------------------
 
 rule Brave-browser         desktop='^2'
 rule KotatogramDesktop     desktop='^3'
@@ -80,9 +74,7 @@ rule Lxappearance          state=floating
 
 config external_rules_command "$HOME/.config/bspwm/scripts/spotifyrule.sh"
 
-# #######################################################################
-# #                           GENERAL CONFIG                            #
-# #######################################################################
+# ----------------------- GENERAL CONFIG -----------------------
 
 bspc monitor -d 1 2 3 4 5 6 
 
@@ -94,7 +86,8 @@ config borderless_monocle       true
 config gapless_monocle          true
 bspc config paddingless_monocle true
 bspc config single_monocle      false
-#config focus_follows_pointer   true
+config focus_follows_pointer    false
+
 config top_padding              40
 config bottom_padding           100
 config left_padding             50
