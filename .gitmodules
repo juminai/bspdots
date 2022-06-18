@@ -1,0 +1,3 @@
+[submodule "misc/wallpapers"]
+	path = misc/wallpapers
+	url = https://github.com/juminai/wallpapers
