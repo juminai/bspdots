@@ -1,1 +1,1 @@
-![desktop images](screenshots/magnolia.png)
+![desktop images](screenshots/kafig.png)
