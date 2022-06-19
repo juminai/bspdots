@@ -105,15 +105,15 @@ URL="api.openweathermap.org/data/2.5/weather?appid=$APIKEY$UNIT_URL&lang=$LANG&i
 function getData {
     ERROR=0
     # For logging purposes
-    # echo " " >> "$HOME/.weather.log"
-    # echo `date`" ################################" >> "$HOME/.weather.log"
+    #echo " " >> "$HOME/.weather.log"
+    #echo `date`" ################################" >> "$HOME/.weather.log"
     RESPONSE=`curl -s $URL`
     if [ "$1" = "-d" ]; then
         echo $RESPONSE
         echo ""
     fi
     CODE="$?"
-    # echo "Response: $RESPONSE" >> "$HOME/.weather.log"
+    #echo "Response: $RESPONSE" >> "$HOME/.weather.log"
     RESPONSECODE=0
     if [ $CODE -eq 0 ]; then
         RESPONSECODE=`echo $RESPONSE | jq .cod`
@@ -121,10 +121,10 @@ function getData {
     if [ $CODE -ne 0 ] || [ $RESPONSECODE -ne 200 ]; then
         if [ $CODE -ne 0 ]; then
             ERR_MSG="curl Error $CODE"
-            # echo "curl Error $CODE" >> "$HOME/.weather.log"
+            #echo "curl Error $CODE" >> "$HOME/.weather.log"
         else
             ERR_MSG="Conn. Err. $RESPONSECODE"
-            # echo "API Error $RESPONSECODE" >> "$HOME/.weather.log"
+            #echo "API Error $RESPONSECODE" >> "$HOME/.weather.log"
         fi
         ERROR=1
     # else
@@ -268,7 +268,7 @@ function setIcons {
 function outputCompact {
 #    OUTPUT="$WIND %{T$WEATHER_FONT_CODE}%{F$ICON_COLOR}$ICON%{F-}%{T-} $ERR_MSG$COLOR_TEXT_BEGIN$DESCRIPTION$COLOR_TEXT_END| $TEMP"
     OUTPUT="$WIND%{T$WEATHER_FONT_CODE}%{F$ICON_COLOR}$ICON%{F-}%{T-} $ERR_MSG$COLOR_TEXT_BEGIN$DESCRIPTION$COLOR_TEXT_END$TEMP"
-    # echo "Output: $OUTPUT" >> "$HOME/.weather.log"
+    #echo "Output: $OUTPUT" >> "$HOME/.weather.log"
     echo "$OUTPUT"
 }
 
@@ -283,7 +283,7 @@ if [ $ERROR -eq 0 ]; then
     WIND=""
     TEMP=`echo $RESPONSE | jq .main.temp`
     if [ $DISPLAY_LABEL = "yes" ]; then
-        DESCRIPTION=`echo "$RESPONSE" | jq .weather[0].description | tr -d '"' | sed 's/.*/\L&/; s/[a-z]*/\u&/g'`" "
+        DESCRIPTION=`echo "$RESPONSE" | jq .weather[0].description | tr -d '"' | sed 's/.*/\L&/; s/[a-z]*/\u&/g'`""
     else
         DESCRIPTION=""
     fi
