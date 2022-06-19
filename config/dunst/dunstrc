@@ -2,7 +2,7 @@
 width = (100, 350)
 height = 150
 origin = "top-right"
-offset = "25x20"
+offset = "25x25"
 notification_limit = 4
 shrink = yes
 transparency = 0
@@ -22,7 +22,7 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Roboto 11"
+font = "Sarasa Mono CL Semibold 11"
 
 format = "<span size='x-large' font_desc='Sarasa Mono CL 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 

@@ -36,22 +36,28 @@ gsettings set org.gnome.desktop.wm.preferences button-layout ""
 picom &
 
 # Polybar
-$HOME/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh &
 
 # Notify Daemon
 dunst &
 
 # Polkit
-[ -n "$(pidof polkit-gnome-authentication-agent-1)" ] || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+if [[ ! `pidof polkit-gnome-authentication-agent-1` ]]; then
+	/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+fi
 
 # Spotify
-[ -n "$(pidof spotify)" ] || spotify &
+if [[ ! `pidof spotify` ]]; then
+	spotify &
+fi
 
 # Kotatogram 
-[ -n "$(pidof kotatogram-desktop)" ] || kotatogram-desktop &
+if [[ ! `pidof kotatogram-desktop` ]]; then
+	kotatogram-desktop &
+fi
 
 # Wallpaper
-#$HOME/.fehbg &
+#~/.fehbg &
 feh --bg-fill ~/Pictures/Wallpapers/ -z
 
 # ----------------------- RULES -----------------------

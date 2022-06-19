@@ -4,7 +4,7 @@
   "workbench.startupEditor": "none",
   "extensions.ignoreRecommendations": true,
   "editor.suggestSelection": "first",
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.fontFamily": "'Sarasa Mono CL', 'Font Awesome 6 Pro Solid', 'Material Design Icons'",
   "workbench.colorCustomizations": {
     "list.activeSelectionBackground": "#262626",
@@ -47,6 +47,7 @@
     "**/*.sass",
     "**/*.less",
     "**/*.styl",
-    "**/*.ini"
+    "**/*.ini",
+    "**/*.sh"
   ],
 }
