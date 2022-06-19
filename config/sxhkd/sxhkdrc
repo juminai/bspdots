@@ -75,12 +75,12 @@ super + {Return,shift + Return}
     bspc rule -a \* -o state={tiled,floating} ; alacritty
 
 # rofi menus
-super + {d,e}
+super + shift + {d,e}
     {launcher,powermenu}
 
-# screenshot full
+# screenshot
 Print {_,super +}
-   dripshot {full,crop} #sauceshot 
+   sauceshot {full,crop} #dripshot 
 
 # volume control
 XF86Audio{RaiseVolume,LowerVolume,Mute}
@@ -92,13 +92,9 @@ XF86Audio{Next,Prev,Play}
 
 # restart dunst and polybar
 super + {bracketleft,bracketright}
-    $HOME/.config/{dunst,polybar}/launch.sh 
+    ~/.config/{dunst,polybar}/launch.sh 
 
-# restart discord
-super + h 
-    pkill discocss ; discocss
-
-# class name
+# get window class name
 super + alt + c
     dunstify -i gtk-dialog-info "$(xprop | grep 'CLASS')"
 
