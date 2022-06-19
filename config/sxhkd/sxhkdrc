@@ -75,7 +75,7 @@ super + {Return,shift + Return}
     bspc rule -a \* -o state={tiled,floating} ; alacritty
 
 # rofi menus
-super + shift + {d,e}
+super + {d,+ shift + e} 
     {launcher,powermenu}
 
 # screenshot
