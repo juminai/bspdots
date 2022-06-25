@@ -292,5 +292,5 @@ if [ $ERROR -eq 0 ]; then
     setIcons
     outputCompact
 else
-    echo " "
+    echo ""
 fi
