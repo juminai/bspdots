@@ -1,1 +1,1 @@
-![desktop images](screenshots/desuwa.png)
+![desktop images](screenshots/tatakae.png)
