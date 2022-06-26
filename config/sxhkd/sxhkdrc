@@ -16,7 +16,7 @@
 
 # make sxhkd reload its configuration files:
 super + Escape
-    pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd ; dunstify -u low -i input-keyboard 'SXHKD Restarted'
 
 # quit/restart bspwm
 super + alt + {q,r}
@@ -105,3 +105,7 @@ super + alt + p
 # shortcuts
 super + {b,k,s}
     bspc desktop -f {2 ; brave,3 ; kotatogram-desktop,5 ; thunar}
+
+# jgmenu
+shift + ~button3
+    xdo id -N Bspwm -n root && jgmenu_run     

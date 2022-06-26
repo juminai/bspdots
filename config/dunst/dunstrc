@@ -1,7 +1,7 @@
 [global]
 width = (100, 350)
 height = 150
-origin = "top-right"
+origin = "bottom-right"
 offset = "25x25"
 notification_limit = 4
 shrink = yes

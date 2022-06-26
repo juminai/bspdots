@@ -92,10 +92,10 @@ config borderless_monocle       true
 config gapless_monocle          true
 bspc config paddingless_monocle true
 bspc config single_monocle      false
-config focus_follows_pointer    false
+config focus_follows_pointer    true
 
-config top_padding              40
-config bottom_padding           100
+config top_padding              100
+config bottom_padding           40
 config left_padding             50
 config right_padding            50
 
