@@ -22,9 +22,9 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Noto Sans JP Medium 10"
+font = "Noto Sans JP Medium 9"
 
-format = "<span size='x-large' font_desc='Noto Sans JP 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
+format = "<span size='x-large' font_desc='Sarasa Mono CL 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 
 alignment = center
 markup = full
