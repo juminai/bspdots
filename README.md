@@ -1,1 +1,1 @@
-![desktop images](screenshots/quadros.png)
+![desktop images](screenshots/cartola.png)
