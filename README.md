@@ -1,1 +1,1 @@
-![desktop images](screenshots/tatakae.png)
+![desktop images](screenshots/quadros.png)
