@@ -1,8 +1,8 @@
 [global]
 width = (100, 350)
 height = 150
-origin = "bottom-right"
-offset = "25x25"
+origin = "top-right"
+offset = "40x90"
 notification_limit = 4
 shrink = yes
 transparency = 0
@@ -22,7 +22,7 @@ progress_bar_min_width = 0
 progress_bar_max_width = 300
 progress_bar_frame_width = 0
 
-font = "Noto Sans JP Medium 9"
+font = "Noto Sans JP Medium 10"
 
 format = "<span size='x-large' font_desc='Sarasa Mono CL 9' weight='Bold' foreground='#c49ec4'>%s</span>\n%b"
 

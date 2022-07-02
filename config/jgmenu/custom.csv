@@ -14,10 +14,9 @@ File Manager,thunar,stock_folder
 Sauce,bspc desktop -f 6 && mpv https://pornhub.com/random,face-devilish
 ^sep()
 
-Lock,lock,system-lock-screen
-Logout,pkill -KILL -u "$USER" &,system-log-out
-Exit,^checkout(exit
+Lock,betterlockscreen -l dimblur,utox
+Exit,^checkout(exit),backdoor-factory
 ^tag(exit)
-Suspend,lock | systemctl suspend,system-suspend
+Suspend,systemctl suspend,system-suspend
 Reboot,reboot,system-reboot
 Poweroff,poweroff,system-shutdown
