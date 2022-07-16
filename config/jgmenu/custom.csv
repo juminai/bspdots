@@ -18,5 +18,5 @@ Lock,betterlockscreen -l dimblur,utox
 Exit,^checkout(exit),backdoor-factory
 ^tag(exit)
 Suspend,systemctl suspend,system-suspend
-Reboot,reboot,system-reboot
-Poweroff,poweroff,system-shutdown
+Reboot,systemctl reboot,system-reboot
+Poweroff,systemctl poweroff,system-shutdown
